@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td, th {
+    border: 1px  outset red;
+}
+        td{
+            width: 200px;
+            height: 100px;
+            text-align: center;
+        }
+    .a1{
+        background-color: brown;
+    }
+    /* 字体渐变 */
+    .gradient-link {
+        background: linear-gradient(45deg, #ff6b6b, #f06595);
+        -webkit-background-clip: text;
+        color: transparent;
+        }
+    /* 发光 */
+    .glow-link {
+        color: #00f;
+        text-shadow: 0 0 5px rgb(91, 27, 42), 0 0 10px rgb(166, 255, 0), 0 0 15px rgb(255, 85, 0);
+        transition: text-shadow 0.3s;
+    }
+    .glow-link:hover {
+        text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f;
+    }
+    /* 动态打字 */
+    .typing-link {
+        display: inline-block;
+        border-right: 2px solid #000;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 2s steps(20) infinite;
+    }
+
+    @keyframes typing {
+        0% { width: 0; }
+        50% { width: 100%; }
+        100% { width: 0; }
+    }
+    a:hover {
+        transform: scale(1.2);
+    }
+    </style>
+
+</head>
+
+<body>
+    <h1 class="glow-link">这是标题1</h1>
+    <h2 class="glow-link">这是标题2</h2>
+    <h3 class="glow-link">这是标题3</h3>
+    <form action="">
+         <label for="username">用户名</label><input type="text" name="username" id="username" value="" placeholder="输入用户名">
+         <label for="username">密码</label><input type="password" name="password" id="password" value="" placeholder="输入密码">
+         <label for="username">邮箱</label><input type="email" name="email" id="email" value="" placeholder="输入邮箱">
+         <label for="username">被禁用</label><input type="text" name="" id="disabled" value="" placeholder="6666" disabled>
+        <button type="reset" value="重置">重置</button>
+        <select name="city" id="city">
+            <option value="" >--请选择你的城市--</option>
+            <option value="1">丹东</option>
+            <option value="2">新疆</option>
+            <option value="3">海南</option>
+        </select>
+    </form>
+    <label for="content">个人信息</label>
+    <textarea name="text" id="text" rows="1" cols="10" placeholder="输入" ></textarea>
+    <label for="">性别</label>
+    <input type="radio" name="sex" value="1">男
+    <input type="radio" name="sex" value="2">女
+    <input type="radio" name="sex" value="3">人妖
+    <br>
+    <label for="text">爱好：</label>
+    <input type="checkbox" name=" aihao" value="11">篮球
+    <input type="checkbox" name=" aihao" value="22">music
+    <input type="checkbox" name=" aihao" value="33" disabled>rap
+    <button type="reset" value="重置">重置</button>
+    <br>
+    <em>这是斜体</em>
+    <ul>
+        <li>无序</li>
+        <li>列</li>
+        <li>表</li>
+    </ul>
+    <ol>
+        <li > 有序列表</li>
+        <li><a href="https://www.baidu.com" target="_blank" >百度</a></li>
+        <li>
+            <img src="./2.jpg" alt="无了" width="100px" height="50px">
+        </li>
+        <!-- .//为上一级目录 -->
+         
+    </ol>
+ <label for="img">  <img src="file:///E:/QQ20250317-210926.png" alt=" 无了" width="40" height="20">  </label>
+
+<table>
+    <thead>
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr >
+            <td class="a1">4</td> <td class="glow-link">5</td> <td class="a1">6</td>
+        </tr>
+        <tr>
+            <td class="glow-link">7</td> <td class="a1">8</td> <td class="glow-link">9</td>
+        </tr>
+        <tr>
+            <td class="a1">10</td> <td class="glow-link">11</td> <td class="a1">12</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+</body>
+
+</html>
+
