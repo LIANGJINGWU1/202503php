@@ -1,0 +1,93 @@
+.a1 {
+    /* color: #db0e0e;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 5px; */
+    background-color: #2ac83d;
+    width: 200px;
+}
+.a2
+{
+    background-color: #c82abd;
+    width: 200px;
+}
+/* 后代选择器*/
+.a2 p
+{
+    background-color: #2a9fc8;
+    width: 180px;
+    margin: 0;
+}
+/* 子类选择器 */
+.a2>p>span{
+    background-color: #7cc82a;
+    width: 109px;
+    margin: 0;
+}
+/* 相邻兄弟选择器 */
+.a2+p
+{
+    background-color: #c8a02a;
+    width: 111px;
+    margin: 0;
+}
+/* 通用兄弟选择器  对应多个*/
+.a2~.after
+{
+    background-color: #f9f9f9;
+    margin-left: 10px;
+    width: 200px;
+}
+input[type = "text"]
+{
+    background-color: #c82a2a;
+    width: 210px;
+}
+input:hover
+{
+    background-color: #2a2ac8;
+}
+input:focus
+{
+    background-color: #2ac8c8;
+}
+
+/* 伪类选择器 在CSS定义中，a:hover 必须被置于 a:link 和 a:visited 之后，才是有效的。
+注意： 在 CSS 定义中，a:active 必须被置于 a:hover 之后，才是有效的。
+注意：伪类的名称不区分大小写。 */
+.a{
+    color: #da8d8d ;
+    
+}
+a.link{
+    color: #180c05 ;
+}
+.a3:link /* 未访问 */
+{
+    color: #180c05 ;
+}
+.a3:visited /* 已访问 */
+{
+    color: #9e2228;
+}
+.a3:hover /* 鼠标滑过 */ 
+{
+    color: #6abd61;
+}
+.a3:active   /* 鼠标点击 */
+{
+    color: #3ac8c1;
+
+}
+[data-id = "300"]
+{
+    color: blue;
+}
+[data-id = "200"]
+{
+    color: green;
+}
