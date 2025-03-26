@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="top">
+        <div class="card1">1</div>
+        <div class="card2">2</div>
+        <div class="card3">3</div>
+    </div>
+    <div>
+
+    </div>
+</body>
+<style>
+    .header{
+        display: flex;
+        height: 200px;
+        width: 100%;
+        background-color: #ecefe9;
+    }
+    .top{
+        text-shadow: #72b915;
+        text-align: center;
+        font-size: larger;
+        display: flex;
+        /* justify-content: center;水平居中 */
+        /* align-items: center;垂直居中 */
+        height: 1300px;
+        width: 100%;
+        background-color: #f1f1f1;
+        flex-direction: row;/*水平排列*/
+        /* flex-direction: column;/*垂直排列*/
+        /* flex-direction: row-reverse; *//*反向排列*/
+       /*  flex-direction: column-reverse; *//*反向排列*/ 
+        /* align-items: baseline; */
+        /* align-items: flex-start; */
+    }
+    /* .card1{
+        
+        width: 33%;
+        height: 300px;
+        background-color: #87c807;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin: 20px;
+    }
+    .card2{
+        width: 33%;
+        height: 200px;
+        background-color: #72b915;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin: 20px;
+    }
+    .card3{
+        width: 33%;
+        height: 100px;
+        background-color: #35570a;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin: 20px;
+    } */
+     .card1{
+        flex: 1;
+        background-color: #b7e37e;
+     }
+     .card2{
+        flex: 2;
+        background-color: #586843;
+     }
+     .card3{
+        flex: 1;
+        background-color: #72b915;
+     }
+</style>
+</html>
