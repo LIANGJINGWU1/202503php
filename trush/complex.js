@@ -28,7 +28,7 @@ const productList = [
 
         // 商品列表（固定）
         const productList = [
-        { id: 1, name: "无线耳机", price: 199, img: "touxiang.jpg" },
+        { id: 1, name: "斑鬣狗", price: 9999, img: "touxiang.jpg" },
         { id: 2, name: "充电宝", price: 129, img: "images/powerbank.jpg" },
         { id: 3, name: "显示器", price: 899, img: "images/monitor.jpg" },
         { id: 4, name: "键盘", price: 299, img: "images/keyboard.jpg" }
