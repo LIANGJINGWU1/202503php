@@ -269,6 +269,24 @@ $usersData = array_map(function ($user) {
 }, $users);
 echoWithBr(json_encode($usersData));
 
+//
+
+$number = [1, 2, 3];
+$even = array_filter($number,fn($n) => $n % 3 == 1);
+printRWithBr($even);
+
+
+
+
+
+
+
+
+
+
+
+
+
 function varDumpWithBr($data): void
 {
     var_dump($data);
