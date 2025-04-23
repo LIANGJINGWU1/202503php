@@ -35,18 +35,18 @@ $testData = [
 ];
 function exchange($c)
 {
-    foreach($c as $cc){
+    foreach($c as $cc){//第一轮遍历第一层[]
         if($cc){
 
-            foreach ($cc as $key => $value){
+            foreach ($cc as $key => $value){//遍历每层的键名，’string，values等
                 $str = "";
                 $val = "";
                 if($key === 'string'){//如果键名==‘string'
                     $str = $value;
                 }
                 if($key === 'values'){
-                    $val = $value;//这是一个字符数组
-                    foreach($val as $valval => $valvalval){
+                    $val = $value;//这是一个键名数组
+                    foreach($val as $valval => $valvalval){//遍历values内部的键名
                         if(str_contains($str, $valval)){
                             //echo str_replace("{{ $valval }}", $valvalval, $str);
                             $str = str_replace("{{ $valval }}", $valvalval, $str);
