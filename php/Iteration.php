@@ -37,10 +37,10 @@ function exchange($c)
 {
     foreach($c as $cc){//第一轮遍历第一层[]
         if($cc){
-
+            $str = "";
+            $val = [];
             foreach ($cc as $key => $value){//遍历每层的键名，’string，values等
-                $str = "";
-                $val = "";
+
                 if($key === 'string'){//如果键名==‘string'
                     $str = $value;
                 }
@@ -59,6 +59,34 @@ function exchange($c)
             }
         }
 
+    }
+}
+function exchange2($c)
+{
+    foreach($c as $cc){
+        if ($cc) {
+            // ✅ 这两个变量在整个 $cc 中有效
+            $str = "";
+            $val = [];
+
+            foreach ($cc as $key => $value) {
+                if ($key === 'string') {
+                    $str = $value;
+                }
+
+                if ($key === 'values') {
+                    $val = $value;
+
+                    foreach ($val as $valval => $valvalval) {
+                        if (str_contains($str, $valval)) {
+                            $str = str_replace("{{ $valval }}", $valvalval, $str);
+                        }
+                    }
+
+                    echo $str . "<br>"; // 输出最终替换结果
+                }
+            }
+        }
     }
 }
 exchange($testData);
