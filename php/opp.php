@@ -1,5 +1,5 @@
 <?php
-require_once "../../trush/20250425made/print.php";
+require_once "../trush/20250425made/print.php";
 class Animal
 {
     public string $name = "unknow";
@@ -125,3 +125,39 @@ echoWithBr($car::$power);
  $mycar->accelerate((100));
  $mycar->brake(10);
 $mycar->brake(40);
+
+//调用父类方法，构造函数
+class Vehicle{
+    protected int $speed = 0;
+
+    public function __construct()
+    {
+        echo "调用Vehicle构造函数";
+    }
+    public function move(int $distance):void
+    {
+        echo "移动了" . $distance . "米";
+    }
+
+}
+    class Bicyle extends Vehicle{
+    public int $gears;
+    public function __construct(int $gears)
+    {
+        //必须先调用父类的构造
+        parent::__construct();
+        //然后进行子类的初始化
+        $this->gears = $gears;
+        echo "bycyle子类构造函数被调用，吃老鼠：" . $this->gears . "<br>";
+    }
+    //覆盖父类的方法
+    public function move(int $distance):void
+    {
+        echo "开始骑行<br>";
+        //调用父类的方法
+        parent::move($distance);
+        echo "骑行结束<br>";
+    }
+    }
+    $bike = new Bicyle(18);
+    $bike->move(100);
