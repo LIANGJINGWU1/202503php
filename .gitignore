@@ -100,3 +100,4 @@ frontend/html/js.js
 /frontend/html
 php/vendor/composer/autoload_namespaces.php
 /php/vendor/composer
+/vendor
