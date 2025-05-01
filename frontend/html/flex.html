@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,38 +11,80 @@
     <script src="https://cdn.staticfile.net/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </head>
+
 <body>
     <div class="top">
-        <div class="top_html"style="">
+        <div class="top_html">
             <a href="#">设为首页</a>
             <a href="#">收藏本站</a>
         </div>
-        
+
     </div>
     <div class="container">
-        <div class="left"></div>     
+        <div class="left"></div>
         <div class="center">
-            <div class="top_1">
-                <div class="top_1_left">
-                    <a href="#" > <img src=".//2.jpg" alt="" width="210px" height="72px"></a>
+            <div class="navbar">
+                <div class="logo"><!-- 左侧图片 -->
+                    <a href="#"> <img src="w100.jpg" alt="LOGO" width="100px" height="100px"></a>
                 </div>
-                <div class="top_1_right">
-                    
+                <div class="user-info"><!-- 右侧一坨 -->
+                    <div class="user-details">
+                        <p class="user-links">
+                            <a href="#">我的</a>
+                            <span>|</span>
+                            <a href="#">设置</a>
+                            <span>|</span>
+                            <a href="#">消息</a>
+                            <span>|</span>
+                            <a href="#">提醒</a>
+                            <span>|</span>
+                            <a href="#">退出</a>
+                        </p>
+                        <p class="user-points">
+                            <a href="#">积分：0</a>
+                            <span>|</span>
+                            <a href="#">用户组：超级VIP</a>
+                        </p>
+                    </div>
+                    <div class="top_1_right_img">
+                        <a href="#"> <img src="touxiang.jpg" alt="个人头像" width="100px" height="100px" style="opacity: 0.4;"></a>
+                    </div>
                 </div>
             </div>
-            <div class="top_2"></div>
-            <div class="top_3"></div>   
+            <h1 style="text-align: center;">商品列表</h1>
+            <div class="goods" id = "goods">
+                <div class="card1" id="card1"></div>
+                <div class="card2" id="card2"></div>
+                <div class="card3" id="card3"></div>
+                <div class="card4" id="card4"></div>
+            </div>
+            <div class="top_3"></div>
             <div class="top_4"></div>
             <div class="top_5"></div>
 
-        </div> 
+        </div>
         <div class="right"></div>
     </div>
-
-    
+ 
+    <div class="ad-box-top-left top-left" id="ad-box-top-left">
+        <button class="ad-box-close" id="ad-box-close1">关闭</button>
+        广告1
+    </div>
+    <div class="ad-box-top-right top-right" id="ad-box-top-right">
+        <button class="ad-box-close" id="ad-box-close2">关闭</button>广告2
+    </div>
+    <div class="ad-box-bottom-left bottom-left" id="ad-box-bottom-left">
+        <button class="ad-box-close" id="ad-box-close3">关闭</button>广告3
+    </div>
+    <div class="ad-box-bottom-right bottom-right" id="ad-box-bottom-right">
+        <button class="ad-box-close" id="ad-box-close4">关闭</button>广告4
+    </div>
 
 </body>
+<script src="flex.js"></script>
+
 </html>
 
 </body>
+
 </html>

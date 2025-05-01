@@ -1,78 +1,3 @@
-for (let i = 0; i < 3; i++) {
-    console.log(i);
-}
-let a=1;
-while( a<3){
-    console.log(a);
-    a++;
-}
-let b = 2;
-do{
-    console.log(b);
-    b++;
-}while(b<3);
-let userInfo = {
-    usrname: "John",
-    age: 25,
-    city: "New York"
-}
-let phone = ["iPhone", "Samsung", "Huawei"];
-console.log(userInfo.usrname);
-console.log(phone[2]);
-for (let key in userInfo)//遍历对象
-     {
-    console.log(key);//属性名称
-    console.log(userInfo[key]);//属性值
-    }
-for(let st of phone)//遍历数组 字符串，set集合，map集合
-    {
-    console.log(st)
-}
-for (let c = 4; c < 8; c++) {
-    if (c == 6) {
-        continue;
-    }
-    if (c == 7) {
-        
-        console.log(c);
-        break;
-    }
-    console.log(c);
-    
-}
-let jiantou = (a, b) => a * b;
-console.log(jiantou(2,5));
-function ab(name = "666"){
-    return name;
-}
-console.log(ab());
-console.log(ab("777"));
-//解构参数
-function abe([a,b])
-{
-   
-    return (`${a}+${b}= ${a+b}`);
-}
-let cc = [1,2];
-console.log(abe(cc));
-let globalVar = 5;
-function df( ){
-    let  localVar = 10;
-    console.log(globalVar);
-    console.log(localVar);
-}
-df();
-function bibao(){
-    let cf = 2;
-    return function(){
-        cf++;
-        return cf;
-    }
-}
-let awsdaslk = bibao();
-console.log(awsdaslk());
-console.log(awsdaslk());
-//单击事件
 document.getElementById("button_click").addEventListener("click",function()
     {
     alert("这是单击事件");
@@ -93,45 +18,114 @@ document.getElementById("button_mousemove").addEventListener("mouseout",function
     const x = document.getElementById("button_mousemove");
     x.style.backgroundColor = "pink";
 })
-document.getElementById("onff").addEventListener("focus",function(){
+function onff(){
     const x = document.getElementById("onff");
     x.placeholder = "请输入你的名字";
     x.style.width = "800px";
+    alert("获取焦点成功");
+}
+document.getElementById("onff").addEventListener("focus",onff);
+function remove(){
+    document.getElementById("onff").removeEventListener("focus",onff);
+    alert("移除成功");
+}
+setTimeout(remove,5000);
+let parent = document.getElementById("parent");
+let child = document.getElementById("child");
+parent.addEventListener("click",function(event){
+    alert("父元素被点击了！");
+    
 });
-document.getElementById("onff").addEventListener("blur",function(){
-    const x = document.getElementById("onff");
-    x.placeholder = "";
-    x.style.width = "";
+child.addEventListener("click",function(event){
+    alert("子元素被点击了！");
+    event.stopPropagation();//阻止事件冒泡
 });
 
 
 
 
+// document.getElementById("onff").addEventListener("blur",function(){
+//     const x = document.getElementById("onff");
+//     x.removeEventListener("focus",)
+//     // x.placeholder = "";
+//     // x.style.width = "";
+// });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// for (let i = 0; i < 3; i++) {
+//     console.log(i);
+// }
+// let a=1;
+// while( a<3){
+//     console.log(a);
+//     a++;
+// }
+// let b = 2;
+// do{
+//     console.log(b);
+//     b++;
+// }while(b<3);
+// let userInfo = {
+//     usrname: "John",
+//     age: 25,
+//     city: "New York"
+// }
+// let phone = ["iPhone", "Samsung", "Huawei"];
+// console.log(userInfo.usrname);
+// console.log(phone[2]);
+// for (let key in userInfo)//遍历对象
+//      {
+//     console.log(key);//属性名称
+//     console.log(userInfo[key]);//属性值
+//     }
+// for(let st of phone)//遍历数组 字符串，set集合，map集合
+//     {
+//     console.log(st)
+// }
+// for (let c = 4; c < 8; c++) {
+//     if (c == 6) {
+//         continue;
+//     }
+//     if (c == 7) {
+        
+//         console.log(c);
+//         break;
+//     }
+//     console.log(c);
+    
+// }
+// let jiantou = (a, b) => a * b;
+// console.log(jiantou(2,5));
+// function ab(name = "666"){
+//     return name;
+// }
+// console.log(ab());
+// console.log(ab("777"));
+//解构参数
+// function abe([a,b])
+// {
+   
+//     return (`${a}+${b}= ${a+b}`);
+// }
+// let cc = [1,2];
+// console.log(abe(cc));
+// let globalVar = 5;
+// function df( ){
+//     let  localVar = 10;
+//     console.log(globalVar);
+//     console.log(localVar);
+// }
+// df();
+// function bibao(){
+//     let cf = 2;
+//     return function(){
+//         cf++;
+//         return cf;
+//     }
+// }
+// let awsdaslk = bibao();
+// console.log(awsdaslk());
+// console.log(awsdaslk());
+//单击事件
 
 
 
