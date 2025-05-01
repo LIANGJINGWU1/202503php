@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<body>
+<form action="phpweb.php" method="GET">
+    搜索内容: <input type="text" name="query">
+    <button type="submit">搜索</button>
+</form>
+
+<form action="phpweb.php" method="POST">
+    姓名: <input type="text" name="name"><br>
+    邮箱: <input type="email" name="email"><br>
+    <input type="submit" value="提交">
+</form>
+
+
+<form class="needs-validation" novalidate method="post" action="phpweb.php">
+    <div class="mb-3">
+        <label for="username" class="form-label">用户名</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+        <div class="invalid-feedback">
+            请输入用户名。
+        </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">提交</button>
+</form>
+
+<form action="phpweb.php" method="POST" enctype="multipart/form-data">
+    <label for="file">选择文件：</label>
+    <input type="file" name="uploadedFile" id="file"><br><br>
+    <input type="submit" value="上传文件">
+</form>
+
+<script>
+    (() => {
+        'use strict';
+        const forms = document.querySelectorAll('.needs-validation');
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+</script>
+</body>
+</html>

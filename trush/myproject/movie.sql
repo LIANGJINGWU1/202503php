@@ -1,0 +1,11 @@
+INSERT INTO `movie`(`id`, `code`, `title`, `tag`, `update`, `duration`, `studio`, `cover_img`, `magnet_link`) VALUES (1, 'ssin-76', '666', '个人', NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `movie`(`id`, `code`, `title`, `tag`, `update`, `duration`, `studio`, `cover_img`, `magnet_link`) VALUES (2, '', '', '', '2025-04-28', 0, '', '', '');
+INSERT INTO `movie`(`id`, `code`, `title`, `tag`, `update`, `duration`, `studio`, `cover_img`, `magnet_link`) VALUES (3, '123456', '', '', '2025-04-22', 0, '', '', '');
+INSERT INTO `movie`(`id`, `code`, `title`, `tag`, `update`, `duration`, `studio`, `cover_img`, `magnet_link`) VALUES (4, '', '', '', '2025-04-28', 0, '', '', '');
+INSERT INTO `movie`(`id`, `code`, `title`, `tag`, `update`, `duration`, `studio`, `cover_img`, `magnet_link`) VALUES (5, 'wddddf', '红警', '', '2025-04-30', 0, '', '../uploads/1745772235_2467.png', '');
+INSERT INTO `movie`(`id`, `code`, `title`, `tag`, `update`, `duration`, `studio`, `cover_img`, `magnet_link`) VALUES (6, '', '', '', '2025-04-28', 0, '', '', '');
+INSERT INTO `movie`(`id`, `code`, `title`, `tag`, `update`, `duration`, `studio`, `cover_img`, `magnet_link`) VALUES (7, '', '', '', '2025-04-28', 0, '', '', '');
+INSERT INTO `movie`(`id`, `code`, `title`, `tag`, `update`, `duration`, `studio`, `cover_img`, `magnet_link`) VALUES (8, '1111', '', '', '2025-04-03', 0, '', '../uploads/1745773292_2286.png', '');
+INSERT INTO `movie`(`id`, `code`, `title`, `tag`, `update`, `duration`, `studio`, `cover_img`, `magnet_link`) VALUES (9, '2222', '', '', '2025-04-10', 0, '', '', '');
+INSERT INTO `movie`(`id`, `code`, `title`, `tag`, `update`, `duration`, `studio`, `cover_img`, `magnet_link`) VALUES (10, '2222', '', '', '2025-04-10', 0, '', '', '');
+INSERT INTO `movie`(`id`, `code`, `title`, `tag`, `update`, `duration`, `studio`, `cover_img`, `magnet_link`) VALUES (11, '2222', '', '', '2025-04-10', 0, '', '../uploads/1745773396_5941.png', '');

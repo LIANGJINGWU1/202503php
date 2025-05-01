@@ -90,14 +90,7 @@ yarn-error.log*
 docker-compose.override.yml
 
 # 如果有其他特定的文件需要忽略，可以在此添加
-student-info.md
-frontend/html/js.js
-/frontend
-/trush
-/frontend/html
-/frontend/html
-#*.js
-/frontend/html
+
 php/vendor/composer/autoload_namespaces.php
 /php/vendor/composer
 /vendor

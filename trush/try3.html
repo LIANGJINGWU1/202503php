@@ -1,0 +1,116 @@
+<div class="ad-box ad-box-top-left">
+    广告1
+    <button class="close-btn" onclick="closeAd('ad-box-top-left')">✖</button>
+</div>
+<div class="ad-box ad-box-top-right">
+    广告2
+    <button class="close-btn" onclick="closeAd('ad-box-top-right')">✖</button>
+</div>
+<div class="ad-box ad-box-bottom-left">
+    广告3
+    <button class="close-btn" onclick="closeAd('ad-box-bottom-left')">✖</button>
+</div>
+<div class="ad-box ad-box-bottom-right">
+    广告4
+    <button class="close-btn" onclick="closeAd('ad-box-bottom-right')">✖</button>
+</div>
+
+<style>
+    .ad-box {
+        position: fixed;
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        background-image: url(touxiang.jpg);
+        background-size: cover;
+        color: white;
+        text-align: center;
+        line-height: 150px;
+        font-size: 18px;
+        animation: blink 0.1s infinite alternate;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+    }
+
+    /* 四个角落 */
+    .ad-box-top-left {
+        top: 0;
+        left: 0;
+        transform-origin: top left;
+    }
+
+    .ad-box-top-right {
+        top: 0;
+        right: 0;
+        transform-origin: top right;
+    }
+
+    .ad-box-bottom-left {
+        bottom: 0;
+        left: 0;
+        transform-origin: bottom left;
+    }
+
+    .ad-box-bottom-right {
+        bottom: 0;
+        right: 0;
+        transform-origin: bottom right;
+    }
+
+    /* 响应式调整 */
+    @media screen and (max-width: 800px) {
+        .ad-box {
+            transform: scale(0.5);
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .ad-box {
+            transform: scale(0.3);
+        }
+    }
+
+    /* 关闭按钮样式 */
+    .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+        line-height: 25px;
+        text-align: center;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.2s;
+    }
+
+    .close-btn:hover {
+        opacity: 1;
+    }
+
+    /* 动画效果 */
+    @keyframes blink {
+        from { opacity: 1; }
+        to { opacity: 0.5; }
+    }
+</style>
+
+<script>
+    function closeAd(adClass) {
+        const adElement = document.querySelector(`.${adClass}`);
+        if (adElement) {
+            adElement.style.transition = "opacity 0.3s";
+            adElement.style.opacity = "0";
+            setTimeout(() => {
+                adElement.remove();
+            }, 300); // 延迟300ms后移除元素
+        }
+    }
+</script>
