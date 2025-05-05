@@ -1,10 +1,14 @@
 <?php
 
+use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\MoviesController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\SessionsController;
 use app\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+
 use App\Models\User;
 //Route::get('/', function () {
 //    return view('welcome');
@@ -44,9 +48,12 @@ Route::name('admin.')->prefix('admin')-> group(function () {
 //隐式路由模型,根据user ID返回页面
 Route::get('/users/{user}', [UserController::class, 'show'])->name('users.show');
 
+Route::resource('categories', CategoriesController::class);
 
-
-
+Route::resource('products', ProductsController::class);
+//----------------------------------------
+//mymovie
+Route::get('/movies', [MoviesController::class, 'index'])->name('movies.index');
 
 
 
