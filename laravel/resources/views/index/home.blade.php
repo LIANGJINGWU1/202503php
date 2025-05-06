@@ -69,14 +69,14 @@
 @endsection
 
 {{-- 如果需要为此页面添加特定的 CSS 或 JS --}}
-{{-- @push('styles')
-<style>
-    /* Home page specific styles */
-</style>
-@endpush --}}
+{{-- @push('styles')--}}
+{{--<style>--}}
+{{--    /* Home page specific styles */--}}
+{{--</style>--}}
+{{--@endpush --}}
 
-{{-- @push('scripts')
-<script>
-    console.log('Home page JavaScript loaded!');
-</script>
-@endpush --}}
+{{-- @push('scripts')--}}
+{{--<script>--}}
+{{--    console.log('Home page JavaScript loaded!');--}}
+{{--</script>--}}
+{{--@endpush --}}

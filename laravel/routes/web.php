@@ -1,11 +1,12 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MoviesController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\SessionsController;
-use app\Http\Controllers\TestController;
+use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +16,7 @@ use App\Models\User;
 //});
 //这个请求交给 TestController 控制器里的 index() 方法来处理
 //name('test.index')给这个路由起个名字
-Route::get('/test', [TestController::class,'index'])->name('tes1t.index');
+Route::get('/test', [TestController::class,'index'])->name('test');
 Route::get('/test2', [TestController::class,'index2'])->name('tes2t.index');
 
 
@@ -54,7 +55,8 @@ Route::resource('products', ProductsController::class);
 //----------------------------------------
 //mymovie
 Route::get('/movies', [MoviesController::class, 'index'])->name('movies.index');
-
-
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+Route::post('/cart/remove', [CartController::class, 'remove'])->name('cart.remove');
 
 
