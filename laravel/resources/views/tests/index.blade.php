@@ -17,15 +17,17 @@
         @endif
         <p class="mb-4">此网站的作者是: {{ $author }}</p>
 
-        @if(!$categories->isEmpty())
+        @if($categories)
             @foreach($categories as $category)
                 <div class="category mb-4">
                     <h2 class="text-2xl mb-2 border-b border-gray-900">
-                        <i class="me-3">#{{ $category->id }} </i>{{ $category->name }}
+                        <i class="me-3">这是ID： #{{ $category->id }} </i>
+                        这是name： {{ $category->name }}
+                        <span>这都是活跃状态为1的</span>
                     </h2>
                 </div>
             @endforeach
-            {{ $categories->links() }}
+{{--            {{ $categories->links() }}--}}
         @endif
 
         <hr class="mt-5">

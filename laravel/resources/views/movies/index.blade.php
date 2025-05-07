@@ -17,15 +17,6 @@
 
 {{--    </div>--}}
 
-<nav class="bg-gray-800 text-white p-4 flex justify-between items-center">
-{{--    <ul class="max-w-7xl mx-auto px-4 flex items-center space-x-6 h-14">--}}
-      <ul  style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; gap: 20px; height: 56px; align-items: center">
-        <li><a href="">主页</a></li>
-        <li><a href="">无码区</a></li>
-        <li><a href="">欧美区</a></li>
-        <li><a href="{{ route('cart.index') }}">购物车</a></li>
-    </ul>
-</nav>
 <nav class="bg-gray-800 text-white">
     <div style="
         max-width: 1000px;
@@ -37,9 +28,9 @@
         align-items: center;
     ">
         <ul style="display: flex; gap: 20px;">
-            <li><a href="/">主页</a></li>
-            <li><a href="#">无码区</a></li>
-            <li><a href="#">欧美区</a></li>
+            <li><a href="#">主页</a></li>
+            <li><a href="#">A区</a></li>
+            <li><a href="#">B区</a></li>
             <li><a href="{{ route('cart.index') }}">购物车</a></li>
         </ul>
     </div>

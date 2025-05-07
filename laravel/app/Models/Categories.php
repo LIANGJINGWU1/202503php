@@ -8,4 +8,8 @@ use Database\Factories\CategoriesFactory;
 
     class Categories extends Model{
         use HasFactory;
+
+        public static function where(string $string, int $int)
+        {
+        }
     }
