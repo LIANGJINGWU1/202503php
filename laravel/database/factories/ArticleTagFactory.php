@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\app\Models\Movie>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\articleTag>
  */
-class MovieFactory extends Factory
+class ArticleTagFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,9 +18,6 @@ class MovieFactory extends Factory
     {
         return [
             //
-            'code' => strtoupper(fake()->bothify('??###')),
-            'title' => $this->faker->title(),
-            'cover_image' => $this->faker->imageUrl()
         ];
     }
 }

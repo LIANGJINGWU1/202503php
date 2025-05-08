@@ -89,22 +89,34 @@ class TestController extends Controller{
             ->orderBy('price', 'desc')->take(3)->get();
 
         //如果找到则返回模型对象，找不到则返回 null。
-        $userId = 1;
-        $categories = Product::find($userId);
+//        $userId = 1;
+//        $categories = Product::find($userId);
+//
+//        try {
+//            $id = 20; // 假设 ID 100 不存在
+//            $userOrFail = Product::findOrFail($id);
+//// 如果找到，代码继续执行
+//            echo "找到用户 (findOrFail): " . $userOrFail->name . "\n";
+//        } catch (ModelNotFoundException $e) {
+//// 如果找不到，会捕获到异常
+//            echo "ID 为 {id} 的用户不存在 (触发了 404)。\n";
+//// abort(404); // 可以手动触发 404 页面
+//        }
+//
+        $categories = new Product();
+//        $categories = $request->input('')
+        $categories = Product::create([
+            'name' => 'ljw',
+            'price' => 2000,
+            'category_id' => 1,
+            'stock' => 66,
+            'status' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
 
-        try {
-            $id = 20; // 假设 ID 100 不存在
-            $userOrFail = Product::findOrFail($id);
-// 如果找到，代码继续执行
-            echo "找到用户 (findOrFail): " . $userOrFail->name . "\n";
-        } catch (ModelNotFoundException $e) {
-// 如果找不到，会捕获到异常
-            echo "ID 为 {id} 的用户不存在 (触发了 404)。\n";
-// abort(404); // 可以手动触发 404 页面
-        }
         return view('tests.index', compact('data',
             'author', 'categories', 'html'));
-
 
 
     }

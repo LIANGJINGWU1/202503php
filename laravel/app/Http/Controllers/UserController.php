@@ -6,7 +6,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
 use JetBrains\PhpStorm\NoReturn;
-use App\Models\User;
+use app\Models\User;
 
 class UserController extends Controller
 {

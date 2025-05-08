@@ -3,16 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Products;
+use App\Models\Product;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
 
 class ProductsController extends Controller
 {
-    public  function index()
+    public  function index() : Factory|View|Application
     {
-
+        return view('products.index');
     }
 
     public  function create()
@@ -25,7 +25,7 @@ class ProductsController extends Controller
 
     }
 
-    public  function show(Products $products)
+    public  function show(Product $products)
     {
 
     }

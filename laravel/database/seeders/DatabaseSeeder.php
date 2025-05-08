@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Categories;
-use App\Models\Products;
-use App\Models\User;
+use app\Models\Categories;
+use app\Models\Products;
+use app\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -23,9 +23,17 @@ class DatabaseSeeder extends Seeder
 //        ]);
 
         $this->call([
-            MovieSeeder::class,
-            CategoriesSeeder::class,
-            ProductSeeder::class
+//            MovieSeeder::class,
+//            CategoriesSeeder::class,
+//            ProductSeeder::class,
+             // 创建 10 个用户
+            AuthorSeeder::class,
+
+            // 创建 20 个标签
+            TagSeeder::class,
+
+            // 创建 50 个帖子
+            PostSeeder::class,
         ]);
     }
 }
