@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Database\Factories\PostFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -11,8 +12,10 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Post extends Model
 {
-    /** @use HasFactory<\Database\Factories\PostFactory> */
+    /** @use HasFactory<PostFactory> */
     use HasFactory;
+
+    public mixed $title;
     protected $fillable = [
         'title',
         'content',
@@ -21,8 +24,13 @@ class Post extends Model
         'status',
     ];
 
+    public static function create(array $only)
+    {
+    }
+
     public function author(): BelongsTo
     {
+        // return $this->belongsTo(Author::class, 'author_id', 'id');
         return $this->belongsTo(Author::class);
     }
 

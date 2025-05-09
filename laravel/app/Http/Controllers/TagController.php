@@ -15,6 +15,7 @@ class TagController extends Controller
      */
     public function index(): Application|View|Factory
     {
+        //使用 Eloquent 预加载，提前加载每个 tag 关联的 posts，避免 N+1 查询。内容保存在内存中
         $tags = Tag::with('posts')->paginate($this->perPage);
         return view('tags.index', compact('tags'));
     }

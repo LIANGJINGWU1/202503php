@@ -33,11 +33,23 @@ class Author extends Model
      *
      * @return HasMany
      */
-    public function posts(): HasMany
+    public function posts(): HasMany//针对post作品表，声明关系，一对多用复数
     {
         // Define the relationship with the Post model
         // return $this->hasMany(Post::class, 'author_id', 'id');
         // 这里的 author_id 是 Post 表中的外键, id 是 Author 表中的主键
         return $this->hasMany(Post::class);
+        //Author::class  ==='App\Models\Author'
+
+        //作者对应多个作品post
+        //当前模型（如 Author）
+        //和 Post 模型有关联
+        //外键默认是 author_id（在 posts 表中）
+        //本模型的主键默认是 id
+        //$this->hasMany(
+        //    目标模型,     // Post::class
+        //    外键,         // 'author_id'（Post 表中的字段）
+        //    本地键         // 'id'（当前模型 Author 的主键）
+        //)
     }
 }

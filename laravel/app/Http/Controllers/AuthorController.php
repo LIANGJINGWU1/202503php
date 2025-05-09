@@ -33,13 +33,19 @@ class AuthorController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        //validate按照你给的规则，检查用户提交的数据是否合格，如果不合格就自动重定向回上一个页面，并附带错误信息（并保留旧输入）。
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:authors,email',
             'bio' => 'nullable|string|max:1000',
         ]);
 
-        Author::create($request->only('name', 'email', 'bio'));
+        Author::create($request->only('name', 'email', 'bio'));//最终只有这三个会被用来创建 Author 记录
+        //[
+        //    'name' => $request->input('name'),
+        //    'email' => $request->input('email'),
+        //    'bio' => $request->input('bio'),
+        //]
 
         // session()->flash('success', 'Author created successfully.');
         return redirect()->route('authors.index')->with('success', 'Author created successfully.');

@@ -6,6 +6,7 @@ use App\Models\Movie;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -16,7 +17,7 @@ class CartController extends Controller
         $cart = session()->get('cart', []);
         return view('cart.index', compact('cart'));
     }
-    public function add(Request $request)
+    public function add(Request $request): RedirectResponse
     {
 //        dd($request->all());
 //        $movie = Movie::find($request->input('code'));
