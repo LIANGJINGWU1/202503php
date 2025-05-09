@@ -17,13 +17,13 @@ class PostController extends Controller
      */
     public function index(Request $request): View
     {
-        if($request->get('serch')){
+        if($request->get('search')){
             $posts = Post::with('author')
-                ->where('title', 'LIKE', '%'.$request->get('serch').'%')
-                ->orWhere('content', 'LIKE', '%'.$request->get('serch').'%')
+                ->where('title', 'LIKE', '%'.$request->get('search').'%')
+                ->orWhere('content', 'LIKE', '%'.$request->get('search').'%')
                 ->paginate($this->perPage);
         }else
-            $post = Post::with('author')->paginate($this->perPage);
+            $posts = Post::with('author')->paginate($this->perPage);
         return view('posts.index', compact('posts'));
     }
 

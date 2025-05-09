@@ -15,7 +15,7 @@ class Post extends Model
     /** @use HasFactory<PostFactory> */
     use HasFactory;
 
-    public mixed $title;
+
     protected $fillable = [
         'title',
         'content',
